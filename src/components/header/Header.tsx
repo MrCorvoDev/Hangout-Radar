@@ -1,11 +1,13 @@
 import Color from 'color';
 import styled from 'styled-components';
 
+import logo from '../../assets/logo.svg';
 import {HeaderProvider} from '../../contexts/HeaderContext';
 import useHeader from '../../hooks/useHeader';
 import em from '../../styles/utils/em';
 import lockPadding from '../../styles/utils/lockPadding';
 import Container from '../core/Container';
+import Image from '../core/Image';
 import HeaderLink from './HeaderLink';
 import Menu from './Menu';
 
@@ -52,10 +54,12 @@ const HeaderEl = styled.header<HeaderProps>`
 `;
 
 const Logo = styled(HeaderLink)`
-   font-size: ${em(27.5)};
+   font-size: ${em(38)};
    position: relative;
    z-index: 2;
-   font-weight: 700;
+   img {
+      height: 1em;
+   }
 `;
 
 const HeaderElement = () => {
@@ -64,7 +68,9 @@ const HeaderElement = () => {
    return (
       <HeaderEl $isSticky={isSticky}>
          <HeaderBody>
-            <Logo to=''>Hangout Radar</Logo>
+            <Logo to=''>
+               <Image src={logo} alt='Hangout Radar Logo' />
+            </Logo>
             <Menu />
          </HeaderBody>
       </HeaderEl>

@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
+import logo from '../assets/logo.svg';
 import {layout} from '../styles/theme';
 import em from '../styles/utils/em';
 import md from '../styles/utils/md';
 import Container from './core/Container';
+import Image from './core/Image';
 
 const FooterEL = styled.footer`
    background-color: ${({theme}) => theme.color2 as string};
@@ -22,10 +24,12 @@ const FooterBody = styled(Container)`
 `;
 
 const Logo = styled(Link)`
-   font-size: ${em(27.5)};
+   font-size: ${em(38)};
    position: relative;
    z-index: 2;
-   font-weight: 700;
+   img {
+      height: 1em;
+   }
 `;
 const Copyright = styled.p`
    font-size: ${em(18)};
@@ -34,7 +38,9 @@ const Copyright = styled.p`
 const Footer = () => (
    <FooterEL>
       <FooterBody>
-         <Logo to=''>Hangout Radar</Logo>
+         <Logo to=''>
+            <Image src={logo} alt='Hangout Radar Logo' />
+         </Logo>
          <Copyright>&copy; {new Date().getFullYear()}</Copyright>
       </FooterBody>
    </FooterEL>
