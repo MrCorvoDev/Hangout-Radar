@@ -33,6 +33,8 @@ const Logo = styled(Link)`
 `;
 const Copyright = styled.p`
    font-size: ${em(18)};
+   font-weight: 700;
+   font-family: 'Mulish', sans-serif;
 `;
 
 const Footer = () => (

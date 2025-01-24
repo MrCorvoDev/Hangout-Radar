@@ -61,7 +61,7 @@ const palette = {
 const theme: DefaultTheme = {
    ...layout,
    ...palette,
-   fontFamily: 'Unbounded, serif',
+   fontFamily: 'Mulish, sans-serif',
    color: palette.color4,
    background: palette.color1,
 };

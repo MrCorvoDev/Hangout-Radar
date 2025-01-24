@@ -57,6 +57,8 @@ const List = styled.ul`
 
 const NavLink = styled(HeaderLink)`
    font-size: ${em(25)};
+   font-family: 'Quicksand', serif;
+   font-weight: 700;
    transition: 0.3s;
    @media (hover: hover) {
       &:hover {
