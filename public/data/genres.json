@@ -1,0 +1,652 @@
+[
+   {
+      "id": "KZFzniwnSyZfZ7v7n1",
+      "name": "Miscellaneous",
+      "type": "segment",
+      "genres": [
+         {
+            "id": "KnvZfZ7vAAa",
+            "name": "Casino/Gaming",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAA1",
+            "name": "Comedy",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAE",
+            "name": "Community/Civic",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lE",
+            "name": "Community/Cultural",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAeE",
+            "name": "Fairs & Festivals",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA1n",
+            "name": "Family",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAI",
+            "name": "Food & Drink",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAl",
+            "name": "Health/Wellness",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAJ",
+            "name": "Hobby/Special Interest Expos",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAt",
+            "name": "Holiday",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lI",
+            "name": "Ice Shows",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJe",
+            "name": "Lecture/Seminar",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAF",
+            "name": "Multimedia",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAn",
+            "name": "Psychics/Mediums/Hypnotists",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lt",
+            "name": "Special Interest/Hobby",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7ll",
+            "name": "Undefined",
+            "type": "genre"
+         }
+      ]
+   },
+   {
+      "id": "KZFzniwnSyZfZ7v7nE",
+      "name": "Sports",
+      "type": "segment",
+      "genres": [
+         {
+            "id": "KnvZfZ7vAeI",
+            "name": "Aquatics",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAet",
+            "name": "Athletic Races",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAen",
+            "name": "Badminton",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAel",
+            "name": "Bandy",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdv",
+            "name": "Baseball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAde",
+            "name": "Basketball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdd",
+            "name": "Biathlon",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAd7",
+            "name": "Body Building",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdA",
+            "name": "Boxing",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdk",
+            "name": "Cricket",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdF",
+            "name": "Curling",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAda",
+            "name": "Cycling",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAd1",
+            "name": "Equestrian",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJF",
+            "name": "eSports",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdJ",
+            "name": "Extreme",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJv",
+            "name": "Field Hockey",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJ7",
+            "name": "Fitness",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA1l",
+            "name": "Floorball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdE",
+            "name": "Football",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdt",
+            "name": "Golf",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdn",
+            "name": "Gymnastics",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdl",
+            "name": "Handball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAdI",
+            "name": "Hockey",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7v",
+            "name": "Ice Skating",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7e",
+            "name": "Indoor Soccer",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA77",
+            "name": "Lacrosse",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7d",
+            "name": "Martial Arts",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7A",
+            "name": "Miscellaneous",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7k",
+            "name": "Motorsports/Racing",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA76",
+            "name": "Netball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAea",
+            "name": "Rodeo",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJA",
+            "name": "Roller Derby",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7a",
+            "name": "Roller Hockey",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA71",
+            "name": "Rugby",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7J",
+            "name": "Ski Jumping",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAd6",
+            "name": "Skiing",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7E",
+            "name": "Soccer",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJd",
+            "name": "Softball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7I",
+            "name": "Squash",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7t",
+            "name": "Surfing",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7n",
+            "name": "Swimming",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vA7l",
+            "name": "Table Tennis",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAv",
+            "name": "Tennis",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAe",
+            "name": "Toros",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAd",
+            "name": "Track & Field",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAA7",
+            "name": "Volleyball",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAA",
+            "name": "Waterpolo",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAAk",
+            "name": "Wrestling",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJ1",
+            "name": "Ringuette",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJJ",
+            "name": "Padel",
+            "type": "genre"
+         }
+      ]
+   },
+   {
+      "id": "KZFzniwnSyZfZ7v7nJ",
+      "name": "Music",
+      "type": "segment",
+      "genres": [
+         {
+            "id": "KnvZfZ7vAvv",
+            "name": "Alternative",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAve",
+            "name": "Ballads/Romantic",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvd",
+            "name": "Blues",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvA",
+            "name": "Chanson Francaise",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvk",
+            "name": "Children's Music",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAeJ",
+            "name": "Classical",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAv6",
+            "name": "Country",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvF",
+            "name": "Dance/Electronic",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAva",
+            "name": "Folk",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAv1",
+            "name": "Hip-Hop/Rap",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvJ",
+            "name": "Holiday",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvE",
+            "name": "Jazz",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJ6",
+            "name": "Latin",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvI",
+            "name": "Medieval/Renaissance",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvt",
+            "name": "Metal",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvn",
+            "name": "New Age",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAvl",
+            "name": "Other",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAev",
+            "name": "Pop",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAee",
+            "name": "R&B",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAed",
+            "name": "Reggae",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAe7",
+            "name": "Religious",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAeA",
+            "name": "Rock",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAe6",
+            "name": "Undefined",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAeF",
+            "name": "World",
+            "type": "genre"
+         }
+      ]
+   },
+   {
+      "id": "KZFzniwnSyZfZ7v7na",
+      "name": "Arts & Theatre",
+      "type": "segment",
+      "genres": [
+         {
+            "id": "KnvZfZ7v7na",
+            "name": "Children's Theatre",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7n1",
+            "name": "Circus & Specialty Acts",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7nJ",
+            "name": "Classical",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAe1",
+            "name": "Comedy",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7nE",
+            "name": "Cultural",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7nI",
+            "name": "Dance",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7nt",
+            "name": "Espectaculo",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7nn",
+            "name": "Fashion",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7nl",
+            "name": "Fine Art",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lv",
+            "name": "Magic & Illusion",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7le",
+            "name": "Miscellaneous",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7ld",
+            "name": "Miscellaneous Theatre",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7l7",
+            "name": "Multimedia",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lA",
+            "name": "Music",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lk",
+            "name": "Opera",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7l6",
+            "name": "Performance Art",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lF",
+            "name": "Puppetry",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7la",
+            "name": "Spectacular",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7l1",
+            "name": "Theatre",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7v7lJ",
+            "name": "Variety",
+            "type": "genre"
+         }
+      ]
+   },
+   {
+      "id": "KZFzniwnSyZfZ7v7nn",
+      "name": "Film",
+      "type": "segment",
+      "genres": [
+         {
+            "id": "KnvZfZ7vAke",
+            "name": "Action/Adventure",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAkd",
+            "name": "Animation",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAk7",
+            "name": "Arthouse",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAkA",
+            "name": "Comedy",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAkk",
+            "name": "Documentary",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAk6",
+            "name": "Drama",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAkF",
+            "name": "Family",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAk1",
+            "name": "Foreign",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJk",
+            "name": "Horror",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAka",
+            "name": "Miscellaneous",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAkJ",
+            "name": "Music",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAJa",
+            "name": "Science Fiction",
+            "type": "genre"
+         },
+         {
+            "id": "KnvZfZ7vAkE",
+            "name": "Urban",
+            "type": "genre"
+         }
+      ]
+   }
+]
