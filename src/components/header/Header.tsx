@@ -46,6 +46,7 @@ const HeaderEl = styled.header<HeaderProps>`
       background: var(--background);
       z-index: 2;
       backdrop-filter: blur(var(--blur));
+      border-radius: 0 0 16px 16px;
    }
 
    ${HeaderBody} {

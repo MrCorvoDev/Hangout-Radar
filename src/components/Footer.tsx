@@ -11,6 +11,7 @@ import Image from './core/Image';
 const FooterEL = styled.footer`
    background-color: ${({theme}) => theme.color2 as string};
    padding: ${em(24)} 0;
+   border-radius: 16px 16px 0 0;
 `;
 
 const FooterBody = styled(Container)`
