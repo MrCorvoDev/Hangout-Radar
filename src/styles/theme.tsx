@@ -49,10 +49,10 @@ const colorBasics = {
 };
 
 const palette = {
-   color1: colorBasics.black,
-   color2: colorBasics.dark,
-   color3: colorBasics.light,
-   color4: colorBasics.white,
+   color1: '#221e06',
+   color2: '#625410',
+   color3: '#f2d900',
+   color4: '#fff59a',
    ...colorBasics,
    ...colorHelpers,
 };
