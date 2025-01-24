@@ -6,15 +6,15 @@ import Layout from './components/core/Layout';
 const isDev = import.meta.env.MODE === 'development';
 const basename = isDev ? '/' : (import.meta.env.VITE_PRODUCTION_ROOT as string);
 
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
+const Explore = lazy(() => import('./pages/Explore'));
+const Bookmarks = lazy(() => import('./pages/Bookmarks'));
 
 const App = () => (
    <BrowserRouter basename={basename}>
       <Routes>
          <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path='/about' element={<About />} />
+            <Route index element={<Explore />} />
+            <Route path='/bookmarks' element={<Bookmarks />} />
          </Route>
       </Routes>
    </BrowserRouter>

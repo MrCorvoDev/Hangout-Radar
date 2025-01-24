@@ -73,8 +73,8 @@ const Nav = () => {
    return (
       <NavEl $isSticky={isSticky} $isMenuOpened={isMenuOpened}>
          <List>
-            <NavLink to=''>Home</NavLink>
-            <NavLink to='about'>About</NavLink>
+            <NavLink to=''>Explore</NavLink>
+            <NavLink to='bookmarks'>Bookmarks</NavLink>
          </List>
       </NavEl>
    );

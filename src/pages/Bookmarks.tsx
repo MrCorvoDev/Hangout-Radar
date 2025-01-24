@@ -11,7 +11,7 @@ const Headline = styled.h1`
 const About = () => (
    <Section>
       <Container>
-         <Headline>About</Headline>
+         <Headline>Bookmarks</Headline>
       </Container>
    </Section>
 );
