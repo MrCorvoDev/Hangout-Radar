@@ -57,6 +57,8 @@ const List = styled.ul`
 
 const NavLink = styled(HeaderLink)`
    font-size: ${em(25)};
+   font-family: 'Quicksand', serif;
+   font-weight: 700;
    transition: 0.3s;
    @media (hover: hover) {
       &:hover {
@@ -71,8 +73,8 @@ const Nav = () => {
    return (
       <NavEl $isSticky={isSticky} $isMenuOpened={isMenuOpened}>
          <List>
-            <NavLink to=''>Home</NavLink>
-            <NavLink to='about'>About</NavLink>
+            <NavLink to=''>Explore</NavLink>
+            <NavLink to='bookmarks'>Bookmarks</NavLink>
          </List>
       </NavEl>
    );

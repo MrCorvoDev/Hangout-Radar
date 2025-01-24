@@ -34,12 +34,12 @@ const Button = styled.button`
    min-width: ${em(200)};
 `;
 
-const Home = () => {
+const Explore = () => {
    const [count, setCount] = useURLState<number>('count', 0);
 
    return (
       <Section>
-         <Container className='home'>
+         <Container>
             <Box>
                <Count>{count}</Count>
                <FlexContainer>
@@ -51,4 +51,4 @@ const Home = () => {
       </Section>
    );
 };
-export default Home;
+export default Explore;
