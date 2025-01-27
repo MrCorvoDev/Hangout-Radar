@@ -38,7 +38,7 @@ export default tseslint.config(
          ],
          'react-refresh/only-export-components': 'off',
          '@typescript-eslint/no-redundant-type-constituents': 'off',
-         'quotes': ['warn', 'single'],
+         'quotes': ['warn', 'single', {avoidEscape: true}],
          'arrow-body-style': ['warn', 'as-needed'],
          'arrow-parens': ['warn', 'as-needed'],
          'semi': ['warn', 'always'],
