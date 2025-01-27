@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import styled, {css} from 'styled-components';
 
 import useAppDispatch from '../../hooks/useAppDispatch';
@@ -84,6 +84,12 @@ const Survey = ({isOpen, setIsOpen}: SurveyProps) => {
    const [progress, setProgress] = useState(0);
    const step = SURVEY_STEPS[progress];
 
+   useEffect(() => {
+      setTimeout(() => {
+         if (!isOpen) setProgress(0);
+      }, 300);
+   }, [isOpen]);
+
    const {
       data: countries,
       error: countryError,
@@ -139,6 +145,9 @@ const Survey = ({isOpen, setIsOpen}: SurveyProps) => {
                onClick={() => {
                   if (progress === SURVEY_STEPS.length - 1) {
                      setIsOpen(false);
+                     setTimeout(() => {
+                        setProgress(0);
+                     }, 300);
                   } else {
                      setProgress(prev => prev + 1);
                   }
