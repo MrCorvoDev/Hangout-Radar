@@ -55,7 +55,7 @@ const SurveySegment = ({segment, index}: SurveySegmentProps) => {
    }, [dispatch, segment.genres, segment.id, tags.global, userSegments]);
 
    return (
-      <>
+      <div>
          <Title>{segment.name}</Title>
 
          <Tags>
@@ -71,7 +71,7 @@ const SurveySegment = ({segment, index}: SurveySegmentProps) => {
                />
             ))}
          </Tags>
-      </>
+      </div>
    );
 };
 export default SurveySegment;

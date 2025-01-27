@@ -7,7 +7,9 @@ import {
    useGetSegmentsQuery,
 } from '../../store/api/localDataApi';
 import {resetPreferences} from '../../store/slices/userPreferenceSlice';
+import {layout} from '../../styles/theme';
 import em from '../../styles/utils/em';
+import md from '../../styles/utils/md';
 import Button from '../form/Button';
 import Modal from '../modal/Modal';
 import ModalCloseButton from '../modal/ModalCloseButton';
@@ -48,6 +50,10 @@ const ButtonBox = styled.div`
 
 const ButtonEl = styled(Button)<{$secondary?: boolean}>`
    min-width: ${em(180)};
+   @media (${md(layout.md3)}) {
+      min-width: 0;
+      flex: 1 1 auto;
+   }
    border: 2px solid ${props => props.theme.color2 as string};
    @media (hover: hover) {
       &:hover {
