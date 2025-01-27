@@ -53,7 +53,6 @@ Reactor/
 │ ├── contexts/ # React contexts
 │ ├── hooks/ # Custom hooks
 │ ├── pages/ # Page components
-│ ├── services/ # Services
 │ ├── styles/ # Styling files
 │ ├── types/ # TypeScript types
 │ ├── utils/ # Utility functions
