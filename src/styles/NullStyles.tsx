@@ -65,6 +65,9 @@ const NullStyles = css`
       cursor: pointer;
       background-color: transparent;
    }
+   dialog {
+      color: inherit;
+   }
    button::-moz-focus-inner {
       padding: 0;
       border: 0;
