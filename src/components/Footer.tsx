@@ -1,3 +1,6 @@
+import {faSlidersH} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {useLocalStorage} from '@uidotdev/usehooks';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -7,6 +10,7 @@ import em from '../styles/utils/em';
 import md from '../styles/utils/md';
 import Container from './core/Container';
 import Image from './core/Image';
+import Survey from './survey/Survey';
 
 const FooterEL = styled.footer`
    background-color: ${({theme}) => theme.color2 as string};
@@ -32,20 +36,35 @@ const Logo = styled(Link)`
       height: 1em;
    }
 `;
-const Copyright = styled.p`
-   font-size: ${em(18)};
-   font-weight: 700;
-   font-family: 'Mulish', sans-serif;
+const RetakeSurveyButton = styled.button`
+   font-size: ${em(24)};
+   padding: ${em(4, 24)};
+   @media (hover: hover) {
+      &:hover {
+         color: ${({theme}) => theme.color3 as string};
+      }
+   }
 `;
 
-const Footer = () => (
-   <FooterEL>
-      <FooterBody>
-         <Logo to=''>
-            <Image src={logo} alt='Hangout Radar Logo' />
-         </Logo>
-         <Copyright>&copy; {new Date().getFullYear()}</Copyright>
-      </FooterBody>
-   </FooterEL>
-);
+const Footer = () => {
+   const [isOpen, setIsOpen] = useLocalStorage('shouldShowSurvey', true);
+
+   return (
+      <FooterEL>
+         <FooterBody>
+            <Logo to=''>
+               <Image src={logo} alt='Hangout Radar Logo' />
+            </Logo>
+            <RetakeSurveyButton
+               type='button'
+               onClick={() => setIsOpen(true)}
+               title='Take Preference Survey'
+            >
+               <FontAwesomeIcon icon={faSlidersH} />
+            </RetakeSurveyButton>
+            <Survey isOpen={isOpen} setIsOpen={setIsOpen} />
+         </FooterBody>
+      </FooterEL>
+   );
+};
 export default Footer;

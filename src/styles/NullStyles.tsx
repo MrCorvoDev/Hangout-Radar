@@ -63,6 +63,7 @@ const NullStyles = css`
    a {
       color: inherit;
       cursor: pointer;
+      user-select: none;
       background-color: transparent;
    }
    dialog {
