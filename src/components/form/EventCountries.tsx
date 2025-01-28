@@ -51,6 +51,10 @@ const EventCountries = ({setFilters}: EventCountriesProps) => {
       }));
    }, [selectedOptions, setFilters]);
 
+   useEffect(() => {
+      setSelectedOptions(convertCountriesToOptions(userCountries));
+   }, [userCountries]);
+
    return (
       <>
          {showFallback ? (

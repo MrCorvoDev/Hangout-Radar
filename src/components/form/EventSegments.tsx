@@ -80,6 +80,10 @@ const EventSegments = ({setFilters}: EventSegmentsProps) => {
       }));
    }, [segments, setFilters, userSegments, selectedOptions]);
 
+   useEffect(() => {
+      setSelectedOptions(convertSegmentsToOptions(userSegments));
+   }, [userSegments]);
+
    return (
       <>
          {showFallback ? (
