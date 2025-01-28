@@ -26,7 +26,7 @@ interface TagProps {
    groupId?: string;
    defaultActive?: boolean;
 }
-const Tag = ({name, groupId = 'global', defaultActive}: TagProps) => {
+const Tag = ({name, groupId = 'global', defaultActive, ...props}: TagProps) => {
    const {tags, handleClick, register} = useTag();
 
    const isActive = tags[groupId]?.find(tag => tag.name === name)?.isActive;
@@ -41,6 +41,7 @@ const Tag = ({name, groupId = 'global', defaultActive}: TagProps) => {
          type='button'
          onClick={() => handleClick(name, groupId)}
          $isActive={isActive}
+         {...props}
       >
          {name}
       </TagEl>
