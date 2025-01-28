@@ -6,23 +6,28 @@ import useAccordion from '../../hooks/useAccordion';
 const AccordionContent = ({children}: PropsWithChildren) => {
    const {isOpened} = useAccordion();
    const [isVisible, setIsVisible] = useState(isOpened);
+   const [isOverflow, setIsOverflow] = useState(!isOpened);
 
    const animation = isOpened
-      ? {overflow: 'hidden', opacity: 1, height: 'auto'}
-      : {overflow: 'hidden', opacity: 0, height: 0};
+      ? {opacity: 1, height: 'auto'}
+      : {opacity: 0, height: 0};
 
-   const handleAnimationComplete = (isStart: boolean) => {
+   const handleAnimation = (isStart: boolean) => {
       if (isStart && isOpened) setIsVisible(true);
       if (!isStart && !isOpened) setIsVisible(false);
+      setIsOverflow(isStart);
    };
 
    return (
       <motion.div
-         style={isVisible ? {visibility: 'visible'} : {visibility: 'hidden'}}
+         style={{
+            overflow: isOverflow ? 'hidden' : 'visible',
+            visibility: isVisible ? 'visible' : 'hidden',
+         }}
          initial={animation}
          animate={animation}
-         onAnimationStart={() => handleAnimationComplete(true)}
-         onAnimationComplete={() => handleAnimationComplete(false)}
+         onAnimationStart={() => handleAnimation(true)}
+         onAnimationComplete={() => handleAnimation(false)}
       >
          {children}
       </motion.div>
