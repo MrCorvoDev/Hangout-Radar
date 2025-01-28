@@ -17,9 +17,25 @@ const SelectStyles = css`
             border-color: currentColor;
          }
       }
+      .react-select__indicator svg {
+         fill: ${props => props.theme.color4 as string};
+         stroke: ${props => props.theme.color4 as string};
+      }
+      .react-select__multi-value__remove {
+         @media (hover: hover) {
+            &:hover {
+               background: ${props => props.theme.color1 as string};
+            }
+         }
+      }
    }
-   .react-select__value-container div {
-      color: ${props => props.theme.color4 as string};
+
+   .react-select__value-container {
+      padding-left: 0;
+      padding-right: 0;
+      div {
+         color: ${props => props.theme.color4 as string};
+      }
    }
    .react-select__multi-value {
       background: ${props => props.theme.color2 as string};
@@ -33,10 +49,6 @@ const SelectStyles = css`
       outline-offset: 0px !important;
       outline-style: auto !important;
       outline-width: 1px !important;
-      .react-select__indicator svg {
-         fill: ${props => props.theme.color4 as string};
-         stroke: ${props => props.theme.color4 as string};
-      }
    }
    .react-select__control--menu-is-open .react-select__indicator svg {
       transform: rotate(180deg);
