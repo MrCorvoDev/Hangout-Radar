@@ -14,6 +14,13 @@ const Title = styled.h3`
    font-weight: 700;
    font-family: 'Quicksand', sans-serif;
    margin-bottom: ${em(12, 32)};
+   cursor: pointer;
+   user-select: none;
+   @media (hover: hover) {
+      &:hover {
+         color: ${props => props.theme.color3 as string};
+      }
+   }
 `;
 const Tags = styled.div`
    display: flex;
@@ -26,7 +33,7 @@ interface SurveySegmentProps {
    index: number;
 }
 const SurveySegment = ({segment, index}: SurveySegmentProps) => {
-   const {tags} = useTag();
+   const {tags, setTags} = useTag();
    const dispatch = useAppDispatch();
    const userSegments = useAppSelector(state => state.userPreferences.segments);
 
@@ -54,9 +61,20 @@ const SurveySegment = ({segment, index}: SurveySegmentProps) => {
       }
    }, [dispatch, segment.genres, segment.id, tags.global, userSegments]);
 
+   const handleTitleClick = () => {
+      const isActive = tags.global[0].isActive;
+      setTags(prev => ({
+         ...prev,
+         global: prev.global.map(tag => ({
+            ...tag,
+            isActive: !isActive,
+         })),
+      }));
+   };
+
    return (
       <div>
-         <Title>{segment.name}</Title>
+         <Title onClick={handleTitleClick}>{segment.name}</Title>
 
          <Tags>
             {segment.genres.map(genre => (
