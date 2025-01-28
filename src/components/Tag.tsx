@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {ComponentProps, useEffect} from 'react';
 import styled, {css} from 'styled-components';
 
 import useTag from '../hooks/useTag';
@@ -21,7 +21,7 @@ const TagEl = styled.button<{$isActive?: boolean}>`
            `}
 `;
 
-interface TagProps {
+interface TagProps extends ComponentProps<'button'> {
    name: string;
    groupId?: string;
    defaultActive?: boolean;
