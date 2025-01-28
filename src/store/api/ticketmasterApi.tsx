@@ -1,5 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
+import {TicketmasterResponseType} from '../../types/ticketmaster';
+
 const formatArrayParam = (param: string | string[]) =>
    Array.isArray(param) ? param.join(',') : param;
 
@@ -18,7 +20,7 @@ export const ticketmasterApi = createApi({
       baseUrl: 'https://app.ticketmaster.com/discovery/v2/',
    }),
    endpoints: builder => ({
-      getEvents: builder.query({
+      getEvents: builder.query<TicketmasterResponseType, getEventsProps>({
          query: ({
             page,
             keyword,
