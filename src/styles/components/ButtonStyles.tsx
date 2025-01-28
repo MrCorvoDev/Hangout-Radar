@@ -8,6 +8,8 @@ const ButtonStyles = css`
    border-radius: 5px;
    background-color: ${props => props.theme.color2 as string};
    transition: 0.3s;
+   font-weight: 700;
+   font-family: 'Quicksand', sans-serif;
    span {
       font-size: ${em(24)};
    }

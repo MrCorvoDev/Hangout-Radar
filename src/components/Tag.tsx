@@ -5,10 +5,11 @@ import useTag from '../hooks/useTag';
 import em from '../styles/utils/em';
 
 const TagEl = styled.button<{$isActive?: boolean}>`
-   font-size: ${em(18)};
+   font-size: ${em(16)};
    font-weight: 700;
    border-radius: 16px;
    padding: ${em(8, 18)} ${em(16, 18)};
+   transition: 0.3s;
    ${({$isActive}) =>
       $isActive
          ? css`
