@@ -16,23 +16,29 @@ const getDateByDay = (day: number) => {
 };
 type DateRangeType = 'week' | 'weekend' | 'month';
 const getDatesRange = (range: DateRangeType) => {
-   let dateFrom = now,
-      dateTo = now;
+   let startDateTime = now,
+      endDateTime = now;
 
    switch (range) {
       case 'week':
-         dateTo = getDateByDay(now.getDate() + ((7 - now.getDay() + 7) % 7));
+         endDateTime = getDateByDay(
+            now.getDate() + ((7 - now.getDay() + 7) % 7),
+         );
          break;
       case 'weekend':
-         dateFrom = getDateByDay(now.getDate() + ((6 - now.getDay() + 7) % 7));
-         dateTo = getDateByDay(now.getDate() + ((7 - now.getDay() + 7) % 7));
+         startDateTime = getDateByDay(
+            now.getDate() + ((6 - now.getDay() + 7) % 7),
+         );
+         endDateTime = getDateByDay(
+            now.getDate() + ((7 - now.getDay() + 7) % 7),
+         );
          break;
       case 'month':
-         dateTo = getDateByDay(now.getDate() + 30);
+         endDateTime = getDateByDay(now.getDate() + 30);
          break;
    }
 
-   return [formatDate(dateFrom), formatDate(dateTo)];
+   return [formatDate(startDateTime), formatDate(endDateTime)];
 };
 
 const DatesFlex = styled.div`
@@ -53,10 +59,10 @@ const EventDates = ({setFilters}: EventDatesProps) => {
          ?.name.toLocaleLowerCase() as DateRangeType;
 
       if (type) {
-         const [dateFrom, dateTo] = getDatesRange(type);
-         setFilters(prev => ({...prev, dateFrom, dateTo}));
+         const [startDateTime, endDateTime] = getDatesRange(type);
+         setFilters(prev => ({...prev, startDateTime, endDateTime}));
       } else {
-         setFilters(prev => ({...prev, dateFrom: '', dateTo: ''}));
+         setFilters(prev => ({...prev, startDateTime: '', endDateTime: ''}));
       }
    }, [setFilters, tags]);
 

@@ -9,8 +9,8 @@ export type Types =
    | 'undefined';
 
 export interface EventFiltersType {
-   startDate?: string;
-   endDate?: string;
+   startDateTime?: string;
+   endDateTime?: string;
    searchQuery?: string;
    segmentId?: string | string[];
    genreId?: string | string[];
