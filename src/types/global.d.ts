@@ -11,8 +11,8 @@ export type Types =
 export interface EventFiltersType {
    startDateTime?: string;
    endDateTime?: string;
-   searchQuery?: string;
+   keyword?: string;
    segmentId?: string | string[];
    genreId?: string | string[];
-   country?: string | string[];
+   countryCode?: string | string[];
 }

@@ -61,7 +61,7 @@ const EventFiltersFormComponent = ({
    const debouncedSearchQuery = useDebounce(searchQuery, 500);
 
    useEffect(() => {
-      setFilters(prev => ({...prev, searchQuery: debouncedSearchQuery}));
+      setFilters(prev => ({...prev, keyword: debouncedSearchQuery}));
    }, [debouncedSearchQuery, setFilters]);
 
    return (

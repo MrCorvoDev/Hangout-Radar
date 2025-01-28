@@ -47,7 +47,7 @@ const EventCountries = ({setFilters}: EventCountriesProps) => {
    useEffect(() => {
       setFilters(prev => ({
          ...prev,
-         country: convertOptionsToParams(selectedOptions),
+         countryCode: convertOptionsToParams(selectedOptions),
       }));
    }, [selectedOptions, setFilters]);
 
