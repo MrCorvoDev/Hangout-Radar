@@ -7,6 +7,8 @@ const LabelEl = styled.label`
    display: flex;
    flex-direction: column;
    gap: ${em(12)};
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 700;
    span {
       font-size: ${em(24)};
    }
