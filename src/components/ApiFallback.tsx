@@ -1,13 +1,13 @@
 import {SerializedError} from '@reduxjs/toolkit';
 import {FetchBaseQueryError} from '@reduxjs/toolkit/query';
 
-import Spinner from '../loading/Spinner';
+import Spinner from './loading/Spinner';
 
-interface SurveyFallbackProps {
+interface ApiFallbackProps {
    isLoading: boolean;
    error: FetchBaseQueryError | SerializedError | undefined;
 }
-const SurveyFallback = ({isLoading, error}: SurveyFallbackProps) => (
+const ApiFallback = ({isLoading, error}: ApiFallbackProps) => (
    <>
       {isLoading ? (
          <Spinner />
@@ -16,4 +16,4 @@ const SurveyFallback = ({isLoading, error}: SurveyFallbackProps) => (
       ) : null}
    </>
 );
-export default SurveyFallback;
+export default ApiFallback;
