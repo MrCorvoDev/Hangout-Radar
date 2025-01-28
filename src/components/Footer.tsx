@@ -39,6 +39,7 @@ const Logo = styled(Link)`
 const RetakeSurveyButton = styled.button`
    font-size: ${em(24)};
    padding: ${em(4, 24)};
+   transition: 0.3s;
    @media (hover: hover) {
       &:hover {
          color: ${({theme}) => theme.color3 as string};
