@@ -1,3 +1,5 @@
+import {ImageType} from './ticketmaster';
+
 export type Types =
    | 'string'
    | 'number'
@@ -15,4 +17,14 @@ export interface EventFiltersType {
    segmentId?: string | string[];
    genreId?: string | string[];
    countryCode?: string | string[];
+}
+
+export interface ParsedEventType {
+   id: string;
+   name: string;
+   image: ImageType;
+   genres: string[];
+   date: string;
+   city: string;
+   url: string;
 }
