@@ -47,7 +47,7 @@ const PagePagination = ({
 }: PagePaginationProps) => {
    const totalPages = apiTotalPages > MAX_PAGES ? MAX_PAGES : apiTotalPages;
 
-   if (apiTotalPages === 0) return null;
+   if (apiTotalPages <= 1) return null;
 
    return (
       <PagePaginationEl>
