@@ -10,6 +10,9 @@ const ButtonStyles = css`
    transition: 0.3s;
    font-weight: 700;
    font-family: 'Quicksand', sans-serif;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
    span {
       font-size: ${em(24)};
    }
