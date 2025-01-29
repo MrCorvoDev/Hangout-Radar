@@ -10,7 +10,7 @@ import {resetPreferences} from '../../store/slices/userPreferenceSlice';
 import {layout} from '../../styles/theme';
 import em from '../../styles/utils/em';
 import md from '../../styles/utils/md';
-import ApiFallback from '../apiFallback';
+import ApiFallback from '../ApiFallback';
 import Button from '../form/Button';
 import Modal from '../modal/Modal';
 import ModalCloseButton from '../modal/ModalCloseButton';

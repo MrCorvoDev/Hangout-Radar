@@ -6,7 +6,7 @@ import useAppSelector from '../../hooks/useAppSelector';
 import {CountryType, useGetCountriesQuery} from '../../store/api/localDataApi';
 import SelectStyles from '../../styles/components/SelectStyles';
 import {EventFiltersType} from '../../types/global';
-import ApiFallback from '../apiFallback';
+import ApiFallback from '../ApiFallback';
 import Label from './Label';
 
 const SelectStylesContainer = styled.div`
