@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 import ApiFallback from '../components/apiFallback';
@@ -46,6 +46,12 @@ const Explore = () => {
       ...filters,
    });
    const showFallback = isLoading || error;
+
+   const stringFilter = JSON.stringify(filters);
+   useEffect(() => {
+      setPage(0);
+      window.scrollTo(0, 0);
+   }, [stringFilter]);
 
    const events = data?._embedded?.events?.filter(
       (event, index, self) =>
