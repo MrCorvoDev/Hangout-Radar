@@ -35,7 +35,7 @@ const getGenres = (classification: ClassificationType) => {
                   return item.name;
                }
 
-               return '';
+               return 'Unknown Genre';
             }),
       ),
    ];
@@ -57,7 +57,17 @@ const PLACEHOLDER_IMAGE: ImageType = {
    fallback: false,
 };
 
-const parseEvent = (event: EventType) => {
+interface ParsedEventType {
+   id: string;
+   name: string;
+   image: ImageType;
+   genres: string[];
+   date: string;
+   city: string;
+   url: string;
+}
+
+const parseEvent = (event: EventType): ParsedEventType => {
    const image = event.images
       ? findImage(event.images, '16_9', 500)
       : PLACEHOLDER_IMAGE;

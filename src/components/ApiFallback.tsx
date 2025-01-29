@@ -14,6 +14,7 @@ const ApiFallback = ({isLoading, error}: ApiFallbackProps) => (
       ) : error ? (
          <>
             <p>Error: {'status' in error ? error.status : error.message}</p>
+            <br />
             <p>Please reload the page</p>
          </>
       ) : null}

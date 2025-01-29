@@ -25,6 +25,12 @@ const Layout = styled.div`
    }
 `;
 const Aside = styled.aside``;
+const EventsBody = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: ${em(24)};
+`;
 const FallbackBox = styled.div`
    display: flex;
    justify-content: center;
@@ -70,14 +76,14 @@ const Explore = () => {
                      <ApiFallback isLoading={isLoading} error={error} />
                   </FallbackBox>
                ) : data!._embedded ? (
-                  <>
+                  <EventsBody>
                      <EventList events={events!} />
                      <PagePagination
                         apiTotalPages={data?.page.totalPages ?? 0}
                         page={page}
                         setPage={setPage}
                      />
-                  </>
+                  </EventsBody>
                ) : (
                   <NoResults>No results(</NoResults>
                )}

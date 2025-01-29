@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import {ComponentProps} from 'react';
+import styled, {RuleSet} from 'styled-components';
 
 import {layout} from '../styles/theme';
 import em from '../styles/utils/em';
@@ -15,13 +16,14 @@ const EventListEl = styled.div`
    }
 `;
 
-interface EventListProps {
+interface EventListProps extends ComponentProps<'div'> {
    events: TicketmasterResponseType['_embedded']['events'];
+   eventStyles?: RuleSet<object>;
 }
-const EventList = ({events}: EventListProps) => (
-   <EventListEl>
+const EventList = ({events, eventStyles, ...props}: EventListProps) => (
+   <EventListEl {...props}>
       {events.map(event => (
-         <Event key={event.id} event={event} />
+         <Event key={event.id} event={event} eventStyles={eventStyles} />
       ))}
    </EventListEl>
 );
