@@ -1,6 +1,6 @@
 import {faBookmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import styled, {css} from 'styled-components';
+import styled, {css, RuleSet} from 'styled-components';
 
 import useAppDispatch from '../hooks/useAppDispatch';
 import useAppSelector from '../hooks/useAppSelector';
@@ -13,7 +13,7 @@ import {EventType} from '../types/ticketmaster';
 import parseEvent from '../utils/parseEvent';
 import Image from './core/Image';
 
-const EventEl = styled.article`
+const EventEl = styled.article<{$eventStyles: RuleSet<object>}>`
    display: flex;
    overflow: hidden;
    border-radius: 16px;
@@ -23,6 +23,7 @@ const EventEl = styled.article`
    @media (${md(layout.md4)}) {
       font-size: 1.15em;
    }
+   ${props => props.$eventStyles}
 `;
 const EventImage = styled.div`
    aspect-ratio: 16 / 9;
@@ -143,8 +144,9 @@ const EventButton = styled.a`
 
 interface EventProps {
    event: EventType;
+   eventStyles: RuleSet<object>;
 }
-const Event = ({event}: EventProps) => {
+const Event = ({event, eventStyles}: EventProps) => {
    const dispatch = useAppDispatch();
    const userBookmarks = useAppSelector(state => state.userBookmarks.bookmarks);
 
@@ -154,7 +156,7 @@ const Event = ({event}: EventProps) => {
    );
 
    return (
-      <EventEl>
+      <EventEl $eventStyles={eventStyles}>
          <EventImage>
             <Image src={image.url} alt={name} />
          </EventImage>
