@@ -20,9 +20,6 @@ import Input from './Input';
 import Label from './Label';
 
 const Form = styled.form`
-   position: sticky;
-   z-index: 4;
-   top: 0;
    padding: ${em(24)} ${em(16)};
    background: ${props => props.theme.color2 as string};
    border-radius: 8px;
