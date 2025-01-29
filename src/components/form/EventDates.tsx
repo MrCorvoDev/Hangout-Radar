@@ -7,7 +7,7 @@ import {EventFiltersType} from '../../types/global';
 import DateTag from './DateTag';
 
 const now = new Date();
-const formatDate = (date: Date) => date.toISOString().split('T')[0];
+const formatDate = (date: Date) => date.toISOString().split('.')[0] + 'Z';
 const getDateByDay = (day: number) => {
    const date = new Date();
    date.setDate(date.getDate() + day);
@@ -27,10 +27,10 @@ const getDatesRange = (range: DateRangeType) => {
          break;
       case 'weekend':
          startDateTime = getDateByDay(
-            now.getDate() + ((6 - now.getDay() + 7) % 7),
+            now.getDate() + ((5 - now.getDay() + 7) % 7),
          );
          endDateTime = getDateByDay(
-            now.getDate() + ((7 - now.getDay() + 7) % 7),
+            now.getDate() + ((8 - now.getDay() + 7) % 7),
          );
          break;
       case 'month':
