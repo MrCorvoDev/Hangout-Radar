@@ -54,7 +54,10 @@ const PagePagination = ({
          {Array.from({length: totalPages}).map((_, index) => (
             <PageButton
                key={index}
-               onClick={() => setPage(index)}
+               onClick={() => {
+                  setPage(index);
+                  window.scrollTo(0, 0);
+               }}
                $isActive={page === index}
             >
                {index + 1}

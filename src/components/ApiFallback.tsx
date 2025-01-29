@@ -12,7 +12,10 @@ const ApiFallback = ({isLoading, error}: ApiFallbackProps) => (
       {isLoading ? (
          <Spinner />
       ) : error ? (
-         <p>Error: {'status' in error ? error.status : error.message}</p>
+         <>
+            <p>Error: {'status' in error ? error.status : error.message}</p>
+            <p>Please reload the page</p>
+         </>
       ) : null}
    </>
 );
