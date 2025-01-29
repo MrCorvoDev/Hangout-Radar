@@ -18,7 +18,7 @@ const EventListEl = styled.div`
 
 interface EventListProps extends ComponentProps<'div'> {
    events: TicketmasterResponseType['_embedded']['events'];
-   eventStyles: RuleSet<object>;
+   eventStyles?: RuleSet<object>;
 }
 const EventList = ({events, eventStyles, ...props}: EventListProps) => (
    <EventListEl {...props}>

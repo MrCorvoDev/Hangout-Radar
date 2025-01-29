@@ -13,7 +13,7 @@ import {EventType} from '../types/ticketmaster';
 import parseEvent from '../utils/parseEvent';
 import Image from './core/Image';
 
-const EventEl = styled.article<{$eventStyles: RuleSet<object>}>`
+const EventEl = styled.article<{$eventStyles?: RuleSet<object>}>`
    display: flex;
    overflow: hidden;
    border-radius: 16px;
@@ -144,7 +144,7 @@ const EventButton = styled.a`
 
 interface EventProps {
    event: EventType;
-   eventStyles: RuleSet<object>;
+   eventStyles?: RuleSet<object>;
 }
 const Event = ({event, eventStyles}: EventProps) => {
    const dispatch = useAppDispatch();
