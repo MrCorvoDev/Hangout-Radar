@@ -1,6 +1,6 @@
 import {faSlidersH} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {useLocalStorage} from '@uidotdev/usehooks';
+import {useLocalStorage, useMediaQuery} from '@uidotdev/usehooks';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -40,6 +40,13 @@ const RetakeSurveyButton = styled.button`
    font-size: ${em(24)};
    padding: ${em(4, 24)};
    transition: 0.3s;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 700;
+   @media (${md(layout.md3)}) {
+      display: flex;
+      align-items: center;
+      gap: ${em(16)};
+   }
    @media (hover: hover) {
       &:hover {
          color: ${({theme}) => theme.color3 as string};
@@ -49,6 +56,7 @@ const RetakeSurveyButton = styled.button`
 
 const Footer = () => {
    const [isOpen, setIsOpen] = useLocalStorage('shouldShowSurvey', true);
+   const isMobile = useMediaQuery(`(${md(layout.md3)})`);
 
    return (
       <FooterEL>
@@ -61,6 +69,7 @@ const Footer = () => {
                onClick={() => setIsOpen(true)}
                title='Take Preference Survey'
             >
+               {isMobile && <span>Preference Survey</span>}
                <FontAwesomeIcon icon={faSlidersH} />
             </RetakeSurveyButton>
             <Survey isOpen={isOpen} setIsOpen={setIsOpen} />
