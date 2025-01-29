@@ -36,7 +36,7 @@ const eventStyles = css`
 
 const About = () => {
    const bookmarks = useAppSelector(state => state.userBookmarks.bookmarks);
-   const events = bookmarks;
+   const events = [...bookmarks].reverse();
 
    return (
       <Section>
