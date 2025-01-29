@@ -35,7 +35,7 @@ const getGenres = (classification: ClassificationType) => {
                   return item.name;
                }
 
-               return '';
+               return 'Unknown Genre';
             }),
       ),
    ];
