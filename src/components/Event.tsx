@@ -115,6 +115,12 @@ const EventTitle = styled.h2`
    font-size: ${em(28)};
    font-weight: 700;
    margin-bottom: ${em(8, 28)};
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   padding: 0.1em 0;
 `;
 const EventGenres = styled.div`
    display: flex;
