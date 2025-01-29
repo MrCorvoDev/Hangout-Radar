@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
-import ApiFallback from '../components/apiFallback';
+import ApiFallback from '../components/ApiFallback';
 import Container from '../components/core/Container';
 import Section from '../components/core/Section';
 import EventList from '../components/EventList';
