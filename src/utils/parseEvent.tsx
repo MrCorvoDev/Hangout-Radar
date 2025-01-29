@@ -1,4 +1,3 @@
-import {ParsedEventType} from '../types/global';
 import {ClassificationType, EventType, ImageType} from '../types/ticketmaster';
 
 const findImage = (images: ImageType[], ratio: string, width: number) => {
@@ -57,6 +56,16 @@ const PLACEHOLDER_IMAGE: ImageType = {
    height: 400,
    fallback: false,
 };
+
+interface ParsedEventType {
+   id: string;
+   name: string;
+   image: ImageType;
+   genres: string[];
+   date: string;
+   city: string;
+   url: string;
+}
 
 const parseEvent = (event: EventType): ParsedEventType => {
    const image = event.images

@@ -18,13 +18,3 @@ export interface EventFiltersType {
    genreId?: string | string[];
    countryCode?: string | string[];
 }
-
-export interface ParsedEventType {
-   id: string;
-   name: string;
-   image: ImageType;
-   genres: string[];
-   date: string;
-   city: string;
-   url: string;
-}

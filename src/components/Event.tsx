@@ -150,8 +150,7 @@ const Event = ({event}: EventProps) => {
    const dispatch = useAppDispatch();
    const userBookmarks = useAppSelector(state => state.userBookmarks.bookmarks);
 
-   const parsedEvent = parseEvent(event);
-   const {url, name, image, genres, date, city} = parsedEvent;
+   const {url, name, image, genres, date, city} = parseEvent(event);
    const isBookmarked = userBookmarks.some(
       bookmark => bookmark.id === event.id,
    );
@@ -172,8 +171,8 @@ const Event = ({event}: EventProps) => {
                      $isActive={isBookmarked}
                      onClick={() =>
                         isBookmarked
-                           ? dispatch(removeBookmark(parsedEvent.id))
-                           : dispatch(addBookmark(parsedEvent))
+                           ? dispatch(removeBookmark(event.id))
+                           : dispatch(addBookmark(event))
                      }
                   >
                      <FontAwesomeIcon icon={faBookmark} />

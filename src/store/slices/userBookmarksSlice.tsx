@@ -1,9 +1,9 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-import {ParsedEventType} from '../../types/global';
+import {EventType} from '../../types/ticketmaster';
 
 interface UserBookmarksType {
-   bookmarks: ParsedEventType[];
+   bookmarks: EventType[];
 }
 
 const saveToLocalStorage = (key: string, value: UserBookmarksType) => {
@@ -13,9 +13,7 @@ const loadFromLocalStorage = (): UserBookmarksType => {
    const storedValue = localStorage.getItem('userBookmarks');
 
    return {
-      bookmarks: storedValue
-         ? (JSON.parse(storedValue) as ParsedEventType[])
-         : [],
+      bookmarks: storedValue ? (JSON.parse(storedValue) as EventType[]) : [],
    };
 };
 
@@ -25,7 +23,7 @@ const bookmarksSlice = createSlice({
    name: 'bookmarks',
    initialState,
    reducers: {
-      addBookmark: (state, action: PayloadAction<ParsedEventType>) => {
+      addBookmark: (state, action: PayloadAction<EventType>) => {
          if (!state.bookmarks.some(event => event.id === action.payload.id)) {
             state.bookmarks.push(action.payload);
          }
