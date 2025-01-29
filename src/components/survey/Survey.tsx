@@ -10,11 +10,11 @@ import {resetPreferences} from '../../store/slices/userPreferenceSlice';
 import {layout} from '../../styles/theme';
 import em from '../../styles/utils/em';
 import md from '../../styles/utils/md';
+import ApiFallback from '../apiFallback';
 import Button from '../form/Button';
 import Modal from '../modal/Modal';
 import ModalCloseButton from '../modal/ModalCloseButton';
 import SurveyCountries from './SurveyCountries';
-import SurveyFallback from './SurveyFallback';
 import SurveyProgress from './SurveyProgress';
 import SurveySegments from './SurveySegments';
 import SurveyStep from './SurveyStep';
@@ -116,7 +116,7 @@ const Survey = ({isOpen, setIsOpen}: SurveyProps) => {
             description={step.description}
          >
             {step.type !== 'intro' && showFallback && (
-               <SurveyFallback isLoading={isLoading} error={error} />
+               <ApiFallback isLoading={isLoading} error={error} />
             )}
             {!showFallback && step.type === 'country' && countries && (
                <SurveyCountries countries={countries} />

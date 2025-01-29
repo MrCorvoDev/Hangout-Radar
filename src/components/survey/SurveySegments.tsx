@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import styled from 'styled-components';
 
 import {TagProvider} from '../../contexts/TagContext';
@@ -20,25 +21,29 @@ interface SurveySegmentsProps {
 const SurveySegments = ({segments}: SurveySegmentsProps) => {
    const userSegments = useAppSelector(state => state.userPreferences.segments);
    const dispatch = useAppDispatch();
-   if (!userSegments.length)
-      // Init state
-      dispatch(
-         updateSegments(
-            segments.map(segment => ({
-               ...segment,
-               genres: [],
-            })),
-         ),
-      );
+
+   useEffect(() => {
+      if (!userSegments.length)
+         dispatch(
+            updateSegments(
+               segments.map(segment => ({
+                  ...segment,
+                  genres: [],
+               })),
+            ),
+         );
+   }, [dispatch, segments, userSegments.length]);
 
    return (
-      <SurveyInterestsEl>
-         {segments?.map((segment, index) => (
-            <TagProvider key={segment.id}>
-               <SurveySegment segment={segment} index={index} />
-            </TagProvider>
-         ))}
-      </SurveyInterestsEl>
+      userSegments.length !== 0 && (
+         <SurveyInterestsEl>
+            {segments?.map((segment, index) => (
+               <TagProvider key={segment.id}>
+                  <SurveySegment segment={segment} index={index} />
+               </TagProvider>
+            ))}
+         </SurveyInterestsEl>
+      )
    );
 };
 export default SurveySegments;

@@ -1,15 +1,20 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import {localDataApi} from './api/localDataApi';
+import ticketmasterApi from './api/ticketmasterApi';
 import userPreferencesReducer from './slices/userPreferenceSlice';
 
 const store = configureStore({
    reducer: {
       [localDataApi.reducerPath]: localDataApi.reducer,
+      [ticketmasterApi.reducerPath]: ticketmasterApi.reducer,
       userPreferences: userPreferencesReducer,
    },
    middleware: getDefaultMiddleware =>
-      getDefaultMiddleware().concat(localDataApi.middleware),
+      getDefaultMiddleware().concat(
+         localDataApi.middleware,
+         ticketmasterApi.middleware,
+      ),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

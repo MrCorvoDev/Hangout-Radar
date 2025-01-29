@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {ComponentProps, useEffect} from 'react';
 import styled, {css} from 'styled-components';
 
 import useTag from '../hooks/useTag';
@@ -21,12 +21,12 @@ const TagEl = styled.button<{$isActive?: boolean}>`
            `}
 `;
 
-interface TagProps {
+interface TagProps extends ComponentProps<'button'> {
    name: string;
    groupId?: string;
    defaultActive?: boolean;
 }
-const Tag = ({name, groupId = 'global', defaultActive}: TagProps) => {
+const Tag = ({name, groupId = 'global', defaultActive, ...props}: TagProps) => {
    const {tags, handleClick, register} = useTag();
 
    const isActive = tags[groupId]?.find(tag => tag.name === name)?.isActive;
@@ -41,6 +41,7 @@ const Tag = ({name, groupId = 'global', defaultActive}: TagProps) => {
          type='button'
          onClick={() => handleClick(name, groupId)}
          $isActive={isActive}
+         {...props}
       >
          {name}
       </TagEl>
