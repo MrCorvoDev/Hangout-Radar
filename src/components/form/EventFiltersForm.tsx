@@ -84,7 +84,7 @@ const EventFiltersFormComponent = ({
          </FlexTopBar>
          <AccordionContent>
             <FormBody>
-               <Label title='Event Keyword'>
+               <Label title='Search'>
                   <Input
                      name='search'
                      type='text'
