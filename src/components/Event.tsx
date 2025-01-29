@@ -17,8 +17,6 @@ const EventEl = styled.article`
    display: flex;
    overflow: hidden;
    border-radius: 16px;
-   @media (${md(layout.md3)}) {
-   }
    @media (${md(layout.md2)}) {
       flex-direction: column;
    }
