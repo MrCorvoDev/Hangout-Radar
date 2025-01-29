@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import AccordionProvider from '../../contexts/AccordionContext';
 import {TagProvider} from '../../contexts/TagContext';
+import useAccordion from '../../hooks/useAccordion';
 import {layout} from '../../styles/theme';
 import em from '../../styles/utils/em';
 import md from '../../styles/utils/md';
@@ -59,10 +60,17 @@ const EventFiltersFormComponent = ({
 }: EventFiltersFormComponentProps) => {
    const [searchQuery, setSearchQuery] = useState('');
    const debouncedSearchQuery = useDebounce(searchQuery, 500);
+   const {isOpened, toggle} = useAccordion();
 
    useEffect(() => {
       setFilters(prev => ({...prev, keyword: debouncedSearchQuery}));
    }, [debouncedSearchQuery, setFilters]);
+
+   useEffect(() => {
+      if (isPC && !isOpened) toggle();
+      if (!isPC && isOpened) toggle();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, [isPC]);
 
    return (
       <Form>
