@@ -129,7 +129,7 @@ const EventGenre = styled.span`
    border-radius: 8px;
    background-color: ${props => props.theme.color1 as string};
 `;
-const EventButton = styled(Link)`
+const EventButton = styled.a`
    ${ButtonStyles}
    text-align: center;
    background-color: ${props => props.theme.color1 as string};
@@ -142,7 +142,7 @@ interface EventProps {
 const Event = ({event}: EventProps) => {
    const [isBookmarked, setIsBookmarked] = useState(false); // TODO Replace with real implementation
 
-   const {id, name, image, genres, date, city} = parseEvent(event);
+   const {url, name, image, genres, date, city} = parseEvent(event);
 
    return (
       <EventEl>
@@ -172,7 +172,7 @@ const Event = ({event}: EventProps) => {
                   </EventGenres>
                )}
             </EventContent>
-            <EventButton to={`/event/${id}`}>
+            <EventButton href={url} target='_blank' rel='noopener noreferrer'>
                <span>View Event</span>
             </EventButton>
          </EventBody>

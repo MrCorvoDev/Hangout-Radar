@@ -76,6 +76,7 @@ const parseEvent = (event: EventType) => {
       genres,
       date,
       city,
+      url: event.url,
    };
 };
 
