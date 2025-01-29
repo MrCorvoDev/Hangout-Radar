@@ -1,5 +1,3 @@
-import {ImageType} from './ticketmaster';
-
 export type Types =
    | 'string'
    | 'number'
