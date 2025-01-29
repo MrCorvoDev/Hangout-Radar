@@ -12,9 +12,11 @@ const saveToLocalStorage = (key: string, value: UserBookmarksType) => {
 const loadFromLocalStorage = (): UserBookmarksType => {
    const storedValue = localStorage.getItem('userBookmarks');
 
-   return {
-      bookmarks: storedValue ? (JSON.parse(storedValue) as EventType[]) : [],
-   };
+   return storedValue
+      ? (JSON.parse(storedValue) as UserBookmarksType)
+      : {
+           bookmarks: [],
+        };
 };
 
 const initialState: UserBookmarksType = loadFromLocalStorage();
