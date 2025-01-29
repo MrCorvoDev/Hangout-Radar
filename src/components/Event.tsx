@@ -1,7 +1,6 @@
 import {faBookmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
 import styled, {css} from 'styled-components';
 
 import ButtonStyles from '../styles/components/ButtonStyles';
