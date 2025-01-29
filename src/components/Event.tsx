@@ -1,8 +1,10 @@
 import {faBookmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {useState} from 'react';
 import styled, {css} from 'styled-components';
 
+import useAppDispatch from '../hooks/useAppDispatch';
+import useAppSelector from '../hooks/useAppSelector';
+import {addBookmark, removeBookmark} from '../store/slices/userBookmarksSlice';
 import ButtonStyles from '../styles/components/ButtonStyles';
 import {layout} from '../styles/theme';
 import em from '../styles/utils/em';
@@ -145,9 +147,14 @@ interface EventProps {
    event: EventType;
 }
 const Event = ({event}: EventProps) => {
-   const [isBookmarked, setIsBookmarked] = useState(false); // TODO Replace with real implementation
+   const dispatch = useAppDispatch();
+   const userBookmarks = useAppSelector(state => state.userBookmarks.bookmarks);
 
-   const {url, name, image, genres, date, city} = parseEvent(event);
+   const parsedEvent = parseEvent(event);
+   const {url, name, image, genres, date, city} = parsedEvent;
+   const isBookmarked = userBookmarks.some(
+      bookmark => bookmark.id === event.id,
+   );
 
    return (
       <EventEl>
@@ -163,7 +170,11 @@ const Event = ({event}: EventProps) => {
                   <EventBookmark
                      type='button'
                      $isActive={isBookmarked}
-                     onClick={() => setIsBookmarked(prev => !prev)}
+                     onClick={() =>
+                        isBookmarked
+                           ? dispatch(removeBookmark(parsedEvent.id))
+                           : dispatch(addBookmark(parsedEvent))
+                     }
                   >
                      <FontAwesomeIcon icon={faBookmark} />
                   </EventBookmark>
